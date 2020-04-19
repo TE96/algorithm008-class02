@@ -1,3 +1,5 @@
+package array;
+
 /**
  * 思路：
  * 考虑两个端点不断往里夹逼的过程
@@ -6,7 +8,7 @@
  * 注：比较过程中可以跳过一些不用计算的情况
  * @author fuwuchen
  */
-public class MaxArea {
+public class ContainerWithMostWater {
     public int maxArea(int[] height) {
         int max = 0;
         for (int i = 0, j = height.length - 1; i <= j; ) {

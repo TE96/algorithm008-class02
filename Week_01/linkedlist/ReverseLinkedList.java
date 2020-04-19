@@ -1,3 +1,5 @@
+package linkedlist;
+
 /**
  * 思路：
  * 只要修改每个节点的next信息。
@@ -5,7 +7,7 @@
  * 在修改next之前需要需要保存next信息以迭代原链表
  * @author fuwuchen
  */
-public class ReverseList {
+public class ReverseLinkedList {
     public ListNode reverseList(ListNode head) {
         if (head == null || head.next == null) {
             return head;

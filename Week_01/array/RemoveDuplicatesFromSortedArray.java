@@ -1,3 +1,5 @@
+package array;
+
 /**
  * 思路: 与MoveZeros类似
  * @author fuwuchen
