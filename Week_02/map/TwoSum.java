@@ -6,6 +6,8 @@ import java.util.Map;
 public class TwoSum {
     /**
      * 一遍Hash法
+     * 时间复杂度: O(n)
+     * 空间复杂度: O(n)
      */
     public int[] twoSumOnceHash(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
@@ -20,6 +22,8 @@ public class TwoSum {
     }
     /**
      * 两遍Hash法
+     * 时间复杂度: O(n+n)=O(n)
+     * 空间复杂度: O(n)
      */
     public int[] twoSumTwiceHash(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
@@ -36,6 +40,8 @@ public class TwoSum {
 
     /**
      * 暴力法
+     * 时间复杂度: O(n^2)
+     * 空间复杂度: O(1)
      */
     public int[] twoSumBruteForce(int[] nums, int target) {
         for (int i = 0; i < nums.length - 1; i ++) {
