@@ -7,7 +7,6 @@ import java.util.List;
 
 public class NaryTreePreorderTraversal {
 
-
     public List<Integer> preorderIteration(Node root) {
         List<Integer> res = new ArrayList<>();
         if (root == null) {
