@@ -1,3 +1,5 @@
+package dc;
+
 import java.util.HashMap;
 
 public class MajorityElement {
