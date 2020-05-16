@@ -22,7 +22,7 @@ public class ConstructBinaryTree {
     }
     private TreeNode buildTree(int startIn, int endIn) {
         // terminator
-        if (startIn < endIn) {
+        if (startIn == endIn) {
             return null;
         }
         // process
