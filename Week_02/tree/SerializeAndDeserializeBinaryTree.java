@@ -15,11 +15,10 @@ public class SerializeAndDeserializeBinaryTree {
             sb.append("n,");
         }
         else {
-            sb.append(String.valueOf(root.val));
-            sb.append(",");
-            // s + 左子树
+            sb.append(root.val).append(",");
+            // sb + 左子树
             sb = serialize(root.left, sb);
-            // s + 左子树 + 右子树
+            // sb + 左子树 + 右子树
             sb = serialize(root.right, sb);
         }
         return sb;
@@ -32,12 +31,12 @@ public class SerializeAndDeserializeBinaryTree {
     }
     private TreeNode deserialize(LinkedList<String> data) {
         String value = data.removeFirst();
-        if ("n".equals(value)) {
-            return null;
+        if (!"n".equals(value)) {
+            TreeNode root = new TreeNode(Integer.parseInt(value));
+            root.left = deserialize(data);
+            root.right = deserialize(data);
+            return root;
         }
-        TreeNode root = new TreeNode(Integer.parseInt(value));
-        root.left = deserialize(data);
-        root.right = deserialize(data);
-        return root;
+        return null;
     }
 }
