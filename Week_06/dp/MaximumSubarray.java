@@ -1,6 +1,16 @@
 package dp;
 
 public class MaximumSubarray {
+
+    public int maxSubArrayOptSpace(int[] nums) {
+        int prevMax = 0, max = nums[0];
+        for (int num : nums) {
+            prevMax = Math.max(prevMax, 0) + num;
+            max = Math.max(prevMax, max);
+        }
+        return max;
+    }
+
     public int maxSubArray(int[] nums) {
         int[] dp = new int[nums.length];
         int max = nums[0]; dp[0] = nums[0];
